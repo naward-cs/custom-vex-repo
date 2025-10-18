@@ -48,7 +48,12 @@
           "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/hashicorp/terraform"
+              "@id": "pkg:golang/github.com/hashicorp/terraform",
+              "subcomponents": [
+                {
+                  "@id": "pkg:golang/stdlib@v1.23.3"
+                }
+              ]
             }
           ]
         },
