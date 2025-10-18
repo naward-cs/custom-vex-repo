@@ -1,9 +1,0 @@
-{
-  "ID": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
-  "Sources": [
-    {
-      "Path": "oci.openvex.json",
-      "URL": "https://github.com/naward-cs/custom-vex-repo/blob/89e3077e6d73fdd46f71ea89f963cdf1fde91bee//pkg/oci/index.docker.io/semaphoreui/semaphore/oci.openvex.json"
-    }
-  ]
-}
