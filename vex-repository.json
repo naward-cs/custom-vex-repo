@@ -9,7 +9,7 @@
           "url": "https://github.com/naward-cs/custom-vex-repo/archive/refs/heads/main.tar.gz//custom-vex-repo-main"
         }
       ],
-      "update_interval": "24h",
+      "update_interval": "15m",
       "repository_specific": {
         "location": {
           "repository_type": "db",
