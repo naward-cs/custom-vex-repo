@@ -54,17 +54,6 @@
               "@id": "pkg:golang/stdlib@v1.23.5"
             }
           ]
-        },
-        {
-          "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
-          "identifiers": {
-            "purl": "pkg:golang/github.com/opentofu/opentofu"
-          },
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/stdlib@v1.22.8"
-            }
-          ]
         }
       ],
       "status": "not_affected",
