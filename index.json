@@ -1,5 +1,5 @@
 {
-  "updated_at": "2025-10-20T14:52:06Z",
+  "updated_at": "2025-10-17T20:47:19Z",
   "packages": [
     {
       "id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",

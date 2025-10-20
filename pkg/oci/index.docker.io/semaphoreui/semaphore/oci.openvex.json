@@ -56,7 +56,7 @@
           ]
         },
         {
-          "@id": "pkg:oci/semaphore?repository_url=index.docker.io/semaphoreui/semaphore",
+          "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
           "identifiers": {
             "purl": "pkg:golang/github.com/opentofu/opentofu"
           },
