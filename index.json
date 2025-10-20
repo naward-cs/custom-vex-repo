@@ -2,7 +2,7 @@
   "updated_at": "2025-10-20T14:52:06Z",
   "packages": [
     {
-      "id": "pkg:oci/semaphore?repository_url=index.docker.io/semaphoreui/semaphore",
+      "id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
       "location": "pkg/oci/index.docker.io/semaphoreui/semaphore/oci.openvex.json"
     }
   ]
