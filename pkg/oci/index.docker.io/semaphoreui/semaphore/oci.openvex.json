@@ -13,9 +13,6 @@
       },
       "products": [
         {
-          "@id": "pkg:pypi/pip@25.2"
-        },
-        {
           "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
           "subcomponents": [
             {
@@ -37,7 +34,10 @@
       },
       "products": [
         {
-          "@id": "pkg:golang/github.com/hashicorp/terraform",
+          "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
+          "identifiers": {
+            "purl": "pkg:golang/github.com/hashicorp/terraform"
+          },
           "subcomponents": [
             {
               "@id": "pkg:golang/stdlib@v1.23.3"
@@ -46,35 +46,20 @@
         },
         {
           "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
+          "identifiers": {
+            "purl": "pkg:golang/github.com/gruntwork-io/terragrunt@v0.78.0"
+          },
           "subcomponents": [
             {
-              "@id": "pkg:golang/github.com/hashicorp/terraform",
-              "subcomponents": [
-                {
-                  "@id": "pkg:golang/stdlib@v1.23.3"
-                }
-              ]
+              "@id": "pkg:golang/stdlib@v1.23.5"
             }
           ]
         },
         {
           "@id": "pkg:oci/semaphore?repository_url=index.docker.io%2Fsemaphoreui%2Fsemaphore",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/stdlib@v1.23.5"
-            }
-          ]
-        },
-        {
-          "@id": "pkg:golang/github.com/gruntwork-io/terragrunt@v0.78.0",
-          "subcomponents": [
-            {
-              "@id": "pkg:golang/stdlib@v1.23.5"
-            }
-          ]
-        },
-        {
-          "@id": "pkg:golang/github.com/opentofu/opentofu",
+          "identifiers": {
+            "purl": "pkg:golang/github.com/opentofu/opentofu"
+          },
           "subcomponents": [
             {
               "@id": "pkg:golang/stdlib@v1.22.8"
