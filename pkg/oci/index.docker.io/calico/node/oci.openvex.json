@@ -13,59 +13,10 @@
       },
       "products": [
         {
-          "@id": "pkg:rpm/redhat/libzstd"
-        },
-        {
           "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-          "identifiers": {
-            "purl": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-          }
-        },
-        {
-          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-          "identifiers": {
-            "purl": "pkg:rpm/redhat/elfutils-libelf@0.190-2.el8?arch=x86_64&distro=redhat-8.10"
-          },
           "subcomponents": [
             {
               "@id": "pkg:rpm/redhat/libzstd"
-            }
-          ]
-        },
-        {
-          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-          "identifiers": {
-            "purl": "pkg:golang/github.com/projectcalico/calico@v3.30.3"
-          },
-          "subcomponents": [
-            {
-              "@id": "pkg:rpm/redhat/libzstd"
-            },
-            {
-              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64"
-            },
-            {
-              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-            },
-            {
-              "@id": "pkg:rpm/redhat/libzstd?arch=x86_64&distro=redhat-8.10"
-            }
-          ]
-        },
-        {
-          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-          "identifiers": {
-            "purl": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-          },
-          "subcomponents": [
-            {
-              "@id": "pkg:rpm/redhat/libzstd"
-            },
-            {
-              "@id": "pkg:rpm/redhat/elfutils-libelf"
-            },
-            {
-              "@id": "pkg:rpm/redhat/iproute-tc"
             }
           ]
         }
