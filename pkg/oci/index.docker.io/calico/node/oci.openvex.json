@@ -1,10 +1,10 @@
 {
   "@context": "https://openvex.dev/ns/v0.2.0",
-  "@id": "calico--node-ce43ea6ff8d2770badcc51e7eac1cccf2da7634a3d79d00ac27f85cece42ae0d",
+  "@id": "calico--node-d5e7069fc9d3cb04db95abd5e7183e0d1c741f50a5062c0964e887421adece79",
   "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
   "role": "Document Creator",
-  "timestamp": "2025-10-21T21:11:17.998841Z",
-  "verions": 1,
+  "timestamp": "2025-10-21T21:29:27.643133Z",
+  "verions": 2,
   "statements": [
     {
       "vulnerability": {
@@ -14,6 +14,14 @@
       "products": [
         {
           "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
+        },
+        {
+          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
+            }
+          ]
         }
       ],
       "status": "not_affected",
