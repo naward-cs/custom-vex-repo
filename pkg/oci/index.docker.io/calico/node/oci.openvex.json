@@ -13,7 +13,12 @@
       },
       "products": [
         {
-          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode"
+          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/coreutils-single@8.30-15.el8?arch=x86_64&distro=redhat-8.10"
+            }
+          ]
         }
       ],
       "status": "not_affected",
