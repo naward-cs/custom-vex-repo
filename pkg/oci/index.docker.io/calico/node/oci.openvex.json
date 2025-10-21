@@ -16,12 +16,20 @@
           "@id": "pkg:rpm/redhat/libzstd"
         },
         {
-        "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-        "identifiers": {
-          "purl": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-        }
-      },
-      {
+          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
+          }
+        },
+        {
+          "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libzstd"
+            }
+          ]
+        },
+        {
           "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
           "identifiers": {
             "purl": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
@@ -32,12 +40,10 @@
             },
             {
               "@id": "pkg:rpm/redhat/elfutils-libelf"
-            }
-            ,
+            },
             {
               "@id": "pkg:rpm/redhat/iproute-tc"
             }
-            
           ]
         }
       ],
