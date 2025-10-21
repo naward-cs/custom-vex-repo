@@ -1,0 +1,33 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "jetstack--cert-manager-acmesolver-c23880282936ff0e478cec737504e0aff02a7d0edfe0b9d91f82ac9074d83118",
+  "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
+  "role": "Document Creator",
+  "timestamp": "2025-10-21T15:56:01.271453Z",
+  "verions": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47907",
+        "description": "Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/cert-manager-acmesolver?repository_url=quay.io%2Fjetstack%2Fcert-manager-acmesolver",
+          "identifiers": {
+            "purl": "pkg:golang/stdlib@v1.24.4"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.24.4"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "database/sql is within the standard GO library, however, the module is never used within the sourcecode",
+      "timestamp": "2025-10-21T15:56:01Z"
+    }
+  ]
+}

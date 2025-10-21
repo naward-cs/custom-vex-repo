@@ -1,0 +1,217 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "keycloak--keycloak-3ec1dbbb7e9ba5ec06479b83b10966567333262e51c799cc10ad87241b7d99f4",
+  "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
+  "role": "Document Creator",
+  "timestamp": "2025-10-21T15:56:01.747390Z",
+  "verions": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2022-27943",
+        "description": "libiberty/rust-demangle.c in GNU GCC 11.2 allows stack consumption in demangle_const, as demonstrated by nm-new."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/libgcc@11.5.0-5.el9_5?arch=x86_64&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2022-41409",
+        "description": "Integer overflow vulnerability in pcre2test before 10.41 allows attackers to cause a denial of service or other unspecified impacts via negative input."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/pcre2@10.40-6.el9?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/pcre2-syntax@10.40-6.el9?arch=noarch&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58056",
+        "description": "Netty is an asynchronous event-driven network application framework for development of maintainable high performance protocol servers and clients. In versions 4.1.124.Final, and 4.2.0.Alpha3 through 4.2.4.Final, Netty incorrectly accepts standalone newline characters (LF) as a chunk-size line terminator, regardless of a preceding carriage return (CR), instead of requiring CRLF per HTTP/1.1 standards. When combined with reverse proxies that parse LF differently (treating it as part of the chunk extension), attackers can craft requests that the proxy sees as one request but Netty processes as two, enabling request smuggling attacks. This is fixed in versions 4.1.125.Final and 4.2.5.Final."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/io.netty/netty-codec-http@4.1.124.Final"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2023-50495",
+        "description": "NCurse v6.4-20230418 was discovered to contain a segmentation fault via the component _nc_wrap_entry()."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/ncurses-base@6.2-10.20210508.el9_6.2?arch=noarch&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/ncurses-libs@6.2-10.20210508.el9_6.2?arch=x86_64&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-5278",
+        "description": "A flaw was found in GNU Coreutils. The sort utility's begfield() function is vulnerable to a heap buffer under-read. The program may access memory outside the allocated buffer if a user runs a crafted command using the traditional key format. A malicious input could lead to a crash or leak sensitive data."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/coreutils-single@8.32-39.el9?arch=x86_64&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-0232",
+        "description": "A heap use-after-free issue has been identified in SQLite in the jsonParseAddNodeArray() function in sqlite3.c. This flaw allows a local attacker to leverage a victim to pass specially crafted malicious input to the application, potentially causing a crash and leading to a denial of service."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/sqlite-libs@3.34.1-8.el9_6?arch=x86_64&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58057",
+        "description": "Netty is an asynchronous event-driven network application framework for rapid development of maintainable high performance protocol servers & clients. In netty-codec-compression versions 4.1.124.Final and below, and netty-codec versions 4.2.4.Final and below, when supplied with specially crafted input, BrotliDecoder and certain other decompression decoders will allocate a large number of reachable byte buffers, which can lead to denial of service. BrotliDecoder.decompress has no limit in how often it calls pull, decompressing data 64K bytes at a time. The buffers are saved in the output list, and remain reachable until OOM is hit. This is fixed in versions 4.1.125.Final of netty-codec and 4.2.5.Final of netty-codec-compression."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "subcomponents": [
+            {
+              "@id": "pkg:maven/io.netty/netty-codec@4.1.124.Final"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:56:01Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-7531",
+        "description": "Calling `PK11_Encrypt()` in NSS using CKM_CHACHA20 and the same buffer for input and output can result in plaintext on an Intel Sandy Bridge processor. In Firefox this only affects the QUIC header protection feature when the connection is using the ChaCha20-Poly1305 cipher suite. The most likely outcome is connection failure, but if the connection persists despite the high packet loss it could be possible for a network observer to identify packets as coming from the same source despite a network path change. This vulnerability affects Firefox < 129, Firefox ESR < 115.14, and Firefox ESR < 128.1."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/keycloak?repository_url=index.docker.io%2Fkeycloak%2Fkeycloak",
+          "identifiers": {
+            "purl": "pkg:rpm/redhat/java-21-openjdk-headless@21.0.8.0.9-1.el9?arch=x86_64&distro=redhat-9.6&epoch=1"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:rpm/redhat/nspr@4.36.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/nss@3.112.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/nss-softokn@3.112.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/nss-softokn-freebl@3.112.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/nss-sysinit@3.112.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            },
+            {
+              "@id": "pkg:rpm/redhat/nss-util@3.112.0-4.el9_4?arch=x86_64&distro=redhat-9.6"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T15:56:01Z"
+    }
+  ]
+}

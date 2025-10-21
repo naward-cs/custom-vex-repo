@@ -1,0 +1,288 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "eks-distro--etcd-v3.5.16-eks-1-33-b8bb38ddf47e11509e521b2b9298ca83286468e9f39877b7e7da96b6d2ba2619",
+  "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
+  "role": "Document Creator",
+  "timestamp": "2025-10-21T15:34:40.452703Z",
+  "verions": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-30204",
+        "description": "golang-jwt is a Go implementation of JSON Web Tokens. Starting in version 3.2.0 and prior to versions 5.2.2 and 4.5.2, the function parse.ParseUnverified splits (via a call to strings.Split) its argument (which is untrusted data) on periods. As a result, in the face of a malicious request whose Authorization header consists of Bearer  followed by many period characters, a call to that function incurs allocations to the tune of O(n) bytes (where n stands for the length of the function's argument), with a constant factor of about 16. This issue is fixed in 5.2.2 and 4.5.2."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.4.2"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/github.com/golang-jwt/jwt/v4@v4.4.2"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "cve only impacts json web tokens, not used in etcd",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "etcd uses x.509 tls not json web tokens",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22869",
+        "description": "SSH servers which implement file transfer protocols are vulnerable to a denial of service attack from clients which complete the key exchange slowly, or not at all, causing pending content to be read into memory, but never transmitted."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.21.0"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.21.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "etcd uses the go.etcd/client/3",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "cve is associated with crypt/ssh module of go/cryptov0.21.0, however, etcd does not use the crypt/ssh module",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47907",
+        "description": "Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "database/sql is within the standard GO library, however, the module is never used within the sourcecode",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22870",
+        "description": "Matching of hosts against proxy patterns can improperly treat an IPv6 zone ID as a hostname component. For example, when the NO_PROXY environment variable is set to \"*.example.com\", a request to \"[::1%25.example.com]:80` will incorrectly match and not be proxied."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-4673",
+        "description": "Proxy-Authorization and Proxy-Authenticate headers persisted on cross-origin redirects potentially leaking sensitive information."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2024-45337",
+        "description": "Applications and libraries which misuse connection.serverAuthenticate (via callback field ServerConfig.PublicKeyCallback) may be susceptible to an authorization bypass. The documentation for ServerConfig.PublicKeyCallback says that \"A call to this function does not guarantee that the key offered is in fact used to authenticate.\" Specifically, the SSH protocol allows clients to inquire about whether a public key is acceptable before proving control of the corresponding private key. PublicKeyCallback may be called with multiple keys, and the order in which the keys were provided cannot be used to infer which key the client successfully authenticated with, if any. Some applications, which store the key(s) passed to PublicKeyCallback (or derived information) and make security relevant determinations based on it once the connection is established, may make incorrect assumptions. For example, an attacker may send public keys A and B, and then authenticate with A. PublicKeyCallback would be called only twice, first with A and then with B. A vulnerable application may then make authorization decisions based on key B for which the attacker does not actually control the private key. Since this API is widely misused, as a partial mitigation golang.org/x/cry...@v0.31.0 enforces the property that, when successfully authenticating via public key, the last key passed to ServerConfig.PublicKeyCallback will be the key used to authenticate the connection. PublicKeyCallback will now be called multiple times with the same key, if necessary. Note that the client may still not control the last key passed to PublicKeyCallback if the connection is then authenticated with a different method, such as PasswordCallback, KeyboardInteractiveCallback, or NoClientAuth. Users should be using the Extensions field of the Permissions return value from the various authentication callbacks to record data associated with the authentication attempt instead of referencing external state. Once the connection is established the state corresponding to the successful authentication attempt can be retrieved via the ServerConn.Permissions field. Note that some third-party libraries misuse the Permissions type by sharing it across authentication attempts; users of third-party libraries should refer to the relevant projects for guidance."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.21.0"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/crypto@v0.21.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "AWS backported fix this",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22872",
+        "description": "The tokenizer incorrectly interprets tags with unquoted attribute values that end with a solidus character (/) as self-closing. When directly using Tokenizer, this can result in such tags incorrectly being marked as self-closing, and when using the Parse functions, this can result in content following such tags as being placed in the wrong scope during DOM construction, but only when tags are in foreign content (e.g. <math>, <svg>, etc contexts)."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.23.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:34:40Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-22871",
+        "description": "The net/http package improperly accepts a bare LF as a line terminator in chunked data chunk-size lines. This can permit request smuggling if a net/http server is used in conjunction with a server that incorrectly accepts a bare LF as part of a chunk-ext."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/server/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        },
+        {
+          "@id": "pkg:oci/etcd?repository_url=public.ecr.aws%2Feks-distro%2Fetcd-io%2Fetcd",
+          "identifiers": {
+            "purl": "pkg:golang/go.etcd.io/etcd/etcdctl/v3"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.22.12"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "function is never called",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "contextual annalysis show cve does not affect container",
+      "timestamp": "2025-10-21T15:34:40Z"
+    }
+  ]
+}

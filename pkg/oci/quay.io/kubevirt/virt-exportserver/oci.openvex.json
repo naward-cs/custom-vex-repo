@@ -1,0 +1,56 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "kubevirt--virt-exportserver-a33f05b1524cd58e3285a4d0766af15871b08a9be307df85a65a8cac9ee3f5ab",
+  "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
+  "role": "Document Creator",
+  "timestamp": "2025-10-21T15:56:03.890309Z",
+  "verions": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47907",
+        "description": "Cancelling a query (e.g. by cancelling the context passed to one of the query methods) during a call to the Scan method of the returned Rows can result in unexpected results if other queries are being made in parallel. This can result in a race condition that may overwrite the expected results with those of another query, causing the call to Scan to return either unexpected results from the other query or an error."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-exportserver?repository_url=quay.io%2Fkubevirt%2Fvirt-exportserver",
+          "identifiers": {
+            "purl": "pkg:golang/stdlib@v1.23.9"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "database/sql is within the standard GO library, however, the module is never used within the sourcecode",
+      "timestamp": "2025-10-21T15:56:03Z"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-4673",
+        "description": "Proxy-Authorization and Proxy-Authenticate headers persisted on cross-origin redirects potentially leaking sensitive information."
+      },
+      "products": [
+        {
+          "@id": "pkg:oci/virt-exportserver?repository_url=quay.io%2Fkubevirt%2Fvirt-exportserver",
+          "identifiers": {
+            "purl": "pkg:golang/stdlib@v1.23.9"
+          },
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.23.9"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "go library contains the affected module, however, the affected module is not used by container, which results in the cve being misseading",
+      "timestamp": "2025-10-21T15:56:03Z"
+    }
+  ]
+}
