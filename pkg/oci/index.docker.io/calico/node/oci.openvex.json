@@ -13,22 +13,10 @@
       },
       "products": [
         {
-          "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-        },
-        {
-          "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8"
-        },
-        {
-          "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64\u0026distro=redhat-8.10"
-        },
-        {
           "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
           "subcomponents": [
             {
-              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
-            },
-            {
-              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64\u0026distro=redhat-8.10"
+              "@id": "pkg:rpm/redhat/libzstd"
             }
           ]
         }
