@@ -56,7 +56,7 @@
           ]
         }
       ],
-      "status": "known_exploited",
+      "status": "not_affected",
       "status_notes": "package manager and base image os commands non-accessable.",
       "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
       "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
