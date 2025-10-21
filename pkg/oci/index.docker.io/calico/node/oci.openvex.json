@@ -1,0 +1,26 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "calico--node-ce43ea6ff8d2770badcc51e7eac1cccf2da7634a3d79d00ac27f85cece42ae0d",
+  "author": "Nicholas Ward (CACI-Senior Cyber Engineer)",
+  "role": "Document Creator",
+  "timestamp": "2025-10-21T21:11:17.998841Z",
+  "verions": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2021-24032",
+        "description": "Beginning in v1.4.1 and prior to v1.4.9, due to an incomplete fix for CVE-2021-24031, the Zstandard command-line utility created output files with default permissions and restricted those permissions immediately afterwards. Output files could therefore momentarily be readable or writable to unintended parties."
+      },
+      "products": [
+        {
+          "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64&distro=redhat-8.10"
+        }
+      ],
+      "status": "not_affected",
+      "status_notes": "package manager and base image os commands non-accessable.",
+      "justification": "vulnerable_code_cannot_be_controlled_by_adversary",
+      "impact_statement": "pre-build code is only affected by this vulnerablity. Advisary would need to alter source code and provide a vulnerable build to be exploitable",
+      "timestamp": "2025-10-21T21:11:17Z"
+    }
+  ]
+}
