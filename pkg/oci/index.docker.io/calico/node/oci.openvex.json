@@ -19,7 +19,7 @@
           "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8"
         },
         {
-          "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8"
+          "@id": "pkg:rpm/redhat/libzstd"
         },
         {
           "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
