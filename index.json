@@ -1,9 +1,0 @@
-{
-  "updated_at": "2025-10-21T18:31:22Z",
-  "packages": [
-    {
-      "id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
-      "location": "pkg/oci/index.docker.io/calico/node/oci.openvex.json"
-    }
-  ]
-}
