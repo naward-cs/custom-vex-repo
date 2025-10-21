@@ -13,6 +13,9 @@
       },
       "products": [
         {
+          "@id": "pkg:rpm/redhat/libzstd"
+        },
+        {
           "@id": "pkg:oci/node?repository_url=index.docker.io%2Fcalico%2Fnode",
           "subcomponents": [
             {
