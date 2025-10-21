@@ -20,7 +20,11 @@
           "subcomponents": [
             {
               "@id": "pkg:rpm/redhat/libzstd"
+            },
+            {
+              "@id": "pkg:rpm/redhat/elfutils-libelf"
             }
+            
           ]
         }
       ],
