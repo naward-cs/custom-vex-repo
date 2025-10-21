@@ -24,6 +24,10 @@
             {
               "@id": "pkg:rpm/redhat/elfutils-libelf"
             }
+            ,
+            {
+              "@id": "pkg:rpm/redhat/iproute-tc"
+            }
             
           ]
         }
