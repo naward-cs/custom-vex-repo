@@ -26,6 +26,9 @@
           "subcomponents": [
             {
               "@id": "pkg:rpm/redhat/libzstd"
+            },
+            {
+              "@id": "pkg:rpm/redhat/libzstd@1.4.4-1.el8?arch=x86_64"
             }
           ]
         },
